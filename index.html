@@ -7,11 +7,16 @@
   <meta name="description" content="EQAD — Creative Design and Project Management Consultation Services. Graphic Design, 3D, Video Production, Animation, Customized Gifts." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Cairo:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+
+  <div class="scroll-progress-track" aria-hidden="true">
+    <div class="scroll-progress" id="scroll-progress"></div>
+  </div>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
 
   <!-- ===== NAVBAR ===== -->
   <header class="navbar" id="navbar">
@@ -28,6 +33,7 @@
         <a href="#about"     data-en="About"       data-ar="عن الشركة">About</a>
         <a href="#services"  data-en="Services"    data-ar="خدماتنا">Services</a>
         <a href="#portfolio" data-en="Portfolio"   data-ar="أعمالنا">Portfolio</a>
+        <a href="#testimonials" data-en="Testimonials" data-ar="آراء العملاء">Testimonials</a>
         <a href="#ceo"       data-en="CEO Message" data-ar="رسالة المدير">CEO Message</a>
         <a href="#contact"   data-en="Contact"     data-ar="تواصل معنا">Contact</a>
       </nav>
@@ -47,21 +53,56 @@
   <section id="hero" class="hero">
     <div class="hero-bg">
       <div class="hero-grid-overlay"></div>
+      <div class="hero-ambient hero-ambient-a"></div>
+      <div class="hero-ambient hero-ambient-b"></div>
+      <div class="hero-ambient hero-ambient-c"></div>
     </div>
-    <div class="hero-content">
-      <div class="hero-badge" data-en="Creativity · Precision · Excellence" data-ar="إبداع · دقة · تميز">Creativity · Precision · Excellence</div>
-      <h1 class="hero-title">
-        <span class="hero-title-main"  data-en="AL EQD AL FARID"       data-ar="العقد الفريد">AL EQD AL FARID</span>
-        <span class="hero-title-accent" data-en="PROJECT MANAGEMENT"   data-ar="لخدمات إدارة المشاريع">PROJECT MANAGEMENT</span>
-        <span class="hero-title-sub"   data-en="SERVICES CO."          data-ar="شركة">SERVICES CO.</span>
-      </h1>
-      <p class="hero-tagline" data-en="Where Creativity Meets Excellence" data-ar="حيث يلتقي الإبداع بالتميز">Where Creativity Meets Excellence</p>
-      <p class="hero-desc" data-en="Delivering world-class creative design and project management consultation services across the UAE and beyond." data-ar="نقدم خدمات تصميم إبداعي واستشارات إدارة مشاريع عالمية المستوى في الإمارات وخارجها.">
-        Delivering world-class creative design and project management consultation services across the UAE and beyond.
-      </p>
-      <div class="hero-buttons">
-        <a href="#services"  class="btn btn-primary" data-en="Explore Our Services" data-ar="استكشف خدماتنا">Explore Our Services</a>
-        <a href="#portfolio" class="btn btn-outline"  data-en="View Portfolio"       data-ar="مشاهدة الأعمال">View Portfolio</a>
+    <div class="hero-inner container">
+      <div class="hero-content">
+        <div class="hero-badge" data-en="Creativity · Precision · Excellence" data-ar="إبداع · دقة · تميز">Creativity · Precision · Excellence</div>
+        <h1 class="hero-title">
+          <span class="hero-title-main"  data-en="AL EQD AL FARID"       data-ar="العقد الفريد">AL EQD AL FARID</span>
+          <span class="hero-title-accent" data-en="PROJECT MANAGEMENT"   data-ar="لخدمات إدارة المشاريع">PROJECT MANAGEMENT</span>
+          <span class="hero-title-sub"   data-en="SERVICES CO."          data-ar="شركة">SERVICES CO.</span>
+        </h1>
+        <p class="hero-tagline" data-en="Where Creativity Meets Excellence" data-ar="حيث يلتقي الإبداع بالتميز">Where Creativity Meets Excellence</p>
+        <p class="hero-desc" data-en="Delivering world-class creative design and project management consultation services across the UAE and beyond." data-ar="نقدم خدمات تصميم إبداعي واستشارات إدارة مشاريع عالمية المستوى في الإمارات وخارجها.">
+          Delivering world-class creative design and project management consultation services across the UAE and beyond.
+        </p>
+        <div class="hero-buttons">
+          <a href="#services"  class="btn btn-primary" data-en="Explore Our Services" data-ar="استكشف خدماتنا">Explore Our Services</a>
+          <a href="#portfolio" class="btn btn-outline"  data-en="View Portfolio"       data-ar="مشاهدة الأعمال">View Portfolio</a>
+        </div>
+      </div>
+
+      <aside class="hero-showcase animate-in" aria-label="Featured visual work">
+        <div class="showcase-card showcase-card-main">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=960&q=80" alt="Creative team working on design project" loading="lazy" />
+          <div class="showcase-meta">
+            <span data-en="Creative Campaign" data-ar="حملة إبداعية">Creative Campaign</span>
+            <strong>2026</strong>
+          </div>
+        </div>
+        <div class="showcase-card showcase-card-small">
+          <img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=720&q=80" alt="3D visualization scene" loading="lazy" />
+        </div>
+        <div class="showcase-card showcase-card-small delayed">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=720&q=80" alt="Workspace with digital project dashboard" loading="lazy" />
+        </div>
+      </aside>
+    </div>
+    <div class="hero-kpis">
+      <div class="hero-kpi animate-in">
+        <span>97%</span>
+        <small data-en="On-time Delivery" data-ar="تسليم في الوقت">On-time Delivery</small>
+      </div>
+      <div class="hero-kpi animate-in" style="transition-delay:0.1s">
+        <span>140+</span>
+        <small data-en="Creative Assets" data-ar="أصول إبداعية">Creative Assets</small>
+      </div>
+      <div class="hero-kpi animate-in" style="transition-delay:0.2s">
+        <span>24/7</span>
+        <small data-en="Client Support" data-ar="دعم العملاء">Client Support</small>
       </div>
     </div>
     <div class="hero-scroll"><div class="scroll-bar"></div></div>
@@ -266,9 +307,9 @@
 
       <div class="portfolio-grid" id="portfolio-grid">
 
-        <div class="portfolio-item animate-in" data-category="graphic">
-          <div class="portfolio-visual" style="background:linear-gradient(135deg,#1a1a2e,#16213e)">
-            <i class="fas fa-palette portfolio-icon"></i>
+        <div class="portfolio-item animate-in" data-category="graphic" role="button" tabindex="0" aria-label="Open portfolio preview">
+          <div class="portfolio-visual">
+            <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1000&q=80" alt="Brand identity design presentation" loading="lazy" />
           </div>
           <div class="portfolio-overlay">
             <h4 data-en="Brand Identity Design" data-ar="تصميم الهوية البصرية">Brand Identity Design</h4>
@@ -276,9 +317,9 @@
           </div>
         </div>
 
-        <div class="portfolio-item animate-in" data-category="3d">
-          <div class="portfolio-visual" style="background:linear-gradient(135deg,#0f3460,#533483)">
-            <i class="fas fa-cube portfolio-icon"></i>
+        <div class="portfolio-item animate-in" data-category="3d" role="button" tabindex="0" aria-label="Open portfolio preview">
+          <div class="portfolio-visual">
+            <img src="https://images.unsplash.com/photo-1633419461186-7d40a38105ec?auto=format&fit=crop&w=1000&q=80" alt="3D concept rendering workflow" loading="lazy" />
           </div>
           <div class="portfolio-overlay">
             <h4 data-en="3D Product Visualization" data-ar="تصور المنتج ثلاثي الأبعاد">3D Product Visualization</h4>
@@ -286,9 +327,9 @@
           </div>
         </div>
 
-        <div class="portfolio-item animate-in" data-category="video">
-          <div class="portfolio-visual" style="background:linear-gradient(135deg,#1b4332,#40916c)">
-            <i class="fas fa-film portfolio-icon"></i>
+        <div class="portfolio-item animate-in" data-category="video" role="button" tabindex="0" aria-label="Open portfolio preview">
+          <div class="portfolio-visual">
+            <img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=1000&q=80" alt="Video production setup with camera" loading="lazy" />
           </div>
           <div class="portfolio-overlay">
             <h4 data-en="Corporate Video Production" data-ar="إنتاج فيديو مؤسسي">Corporate Video Production</h4>
@@ -296,9 +337,9 @@
           </div>
         </div>
 
-        <div class="portfolio-item animate-in" data-category="gifts">
-          <div class="portfolio-visual" style="background:linear-gradient(135deg,#7b2d00,#c9a84c)">
-            <i class="fas fa-gift portfolio-icon"></i>
+        <div class="portfolio-item animate-in" data-category="gifts" role="button" tabindex="0" aria-label="Open portfolio preview">
+          <div class="portfolio-visual">
+            <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=1000&q=80" alt="Customized premium corporate gift packaging" loading="lazy" />
           </div>
           <div class="portfolio-overlay">
             <h4 data-en="Corporate Gift Collection" data-ar="مجموعة الهدايا المؤسسية">Corporate Gift Collection</h4>
@@ -306,19 +347,19 @@
           </div>
         </div>
 
-        <div class="portfolio-item animate-in" data-category="video">
-          <div class="portfolio-visual" style="background:linear-gradient(135deg,#2d0057,#9b2335)">
-            <i class="fas fa-magic portfolio-icon"></i>
+        <div class="portfolio-item animate-in" data-category="video" role="button" tabindex="0" aria-label="Open portfolio preview">
+          <div class="portfolio-visual">
+            <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1000&q=80" alt="Motion graphics editing timeline" loading="lazy" />
           </div>
           <div class="portfolio-overlay">
-            <h4 data-en="Motion Graphics Animation" data-ar="أنيميشن موشن جرافيك">Motion Graphics Animation</h4>
+            <h4 data-en="Motion Graphics" data-ar="موشن جرافيك">Motion Graphics</h4>
             <span data-en="Animation" data-ar="أنيميشن">Animation</span>
           </div>
         </div>
 
-        <div class="portfolio-item animate-in" data-category="graphic">
-          <div class="portfolio-visual" style="background:linear-gradient(135deg,#0a3d62,#1e3799)">
-            <i class="fas fa-ad portfolio-icon"></i>
+        <div class="portfolio-item animate-in" data-category="graphic" role="button" tabindex="0" aria-label="Open portfolio preview">
+          <div class="portfolio-visual">
+            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1000&q=80" alt="Social media campaign visual boards" loading="lazy" />
           </div>
           <div class="portfolio-overlay">
             <h4 data-en="Social Media Campaign" data-ar="حملة وسائل التواصل الاجتماعي">Social Media Campaign</h4>
@@ -330,6 +371,58 @@
 
       <div class="portfolio-cta">
         <a href="#contact" class="btn btn-primary" data-en="Start Your Project" data-ar="ابدأ مشروعك">Start Your Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials" class="section testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" data-en="Client Voice" data-ar="صوت العملاء">Client Voice</span>
+        <h2 class="section-title" data-en="What Clients Say" data-ar="ماذا يقول عملاؤنا">What Clients Say</h2>
+        <p class="section-desc" data-en="Real feedback from brands and teams we partnered with across creative delivery and project management." data-ar="آراء حقيقية من علامات تجارية وفرق عمل شاركنا معها في التنفيذ الإبداعي وإدارة المشاريع.">Real feedback from brands and teams we partnered with across creative delivery and project management.</p>
+      </div>
+
+      <div class="testimonial-slider animate-in" id="testimonial-slider" aria-live="polite">
+        <div class="testimonial-track" id="testimonial-track">
+          <article class="testimonial-card active" data-slide="0">
+            <div class="testimonial-rating" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="testimonial-quote" data-en="EQAD transformed our campaign into a premium visual story. Delivery was structured, fast, and genuinely creative." data-ar="حوّلت عقاد حملتنا إلى قصة بصرية راقية. كان التسليم منظماً وسريعاً وإبداعياً بحق.">EQAD transformed our campaign into a premium visual story. Delivery was structured, fast, and genuinely creative.</p>
+            <div class="testimonial-author">
+              <strong data-en="Noura Al Maktoum" data-ar="نورة آل مكتوم">Noura Al Maktoum</strong>
+              <span data-en="Brand Manager, Retail Group" data-ar="مدير العلامة التجارية، مجموعة تجزئة">Brand Manager, Retail Group</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card" data-slide="1">
+            <div class="testimonial-rating" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="testimonial-quote" data-en="Their project management process gave us clarity at every milestone. We felt in control from kickoff to final handover." data-ar="منهجية إدارة المشاريع لديهم منحتنا وضوحاً في كل مرحلة. شعرنا بالتحكم من البداية حتى التسليم النهائي.">Their project management process gave us clarity at every milestone. We felt in control from kickoff to final handover.</p>
+            <div class="testimonial-author">
+              <strong data-en="Faisal Rahman" data-ar="فيصل رحمن">Faisal Rahman</strong>
+              <span data-en="Operations Director, Hospitality" data-ar="مدير العمليات، قطاع الضيافة">Operations Director, Hospitality</span>
+            </div>
+          </article>
+
+          <article class="testimonial-card" data-slide="2">
+            <div class="testimonial-rating" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <p class="testimonial-quote" data-en="From 3D visualization to motion graphics, every asset looked world-class. EQAD understands both aesthetics and strategy." data-ar="من التصور ثلاثي الأبعاد إلى الموشن جرافيك، بدا كل أصل بمستوى عالمي. عقاد تفهم الجماليات والاستراتيجية معاً.">From 3D visualization to motion graphics, every asset looked world-class. EQAD understands both aesthetics and strategy.</p>
+            <div class="testimonial-author">
+              <strong data-en="Sara Khalid" data-ar="سارة خالد">Sara Khalid</strong>
+              <span data-en="Marketing Lead, Tech Startup" data-ar="قائدة التسويق، شركة تقنية ناشئة">Marketing Lead, Tech Startup</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="testimonial-controls">
+          <button type="button" class="testimonial-btn" id="testimonial-prev" aria-label="Previous testimonial"><i class="fas fa-arrow-left"></i></button>
+          <div class="testimonial-dots" id="testimonial-dots" role="tablist" aria-label="Testimonials navigation">
+            <button type="button" class="testimonial-dot active" data-slide="0" aria-label="Go to testimonial 1"></button>
+            <button type="button" class="testimonial-dot" data-slide="1" aria-label="Go to testimonial 2"></button>
+            <button type="button" class="testimonial-dot" data-slide="2" aria-label="Go to testimonial 3"></button>
+          </div>
+          <button type="button" class="testimonial-btn" id="testimonial-next" aria-label="Next testimonial"><i class="fas fa-arrow-right"></i></button>
+        </div>
       </div>
     </div>
   </section>
@@ -347,7 +440,7 @@
         <div class="ceo-portrait animate-in">
           <div class="ceo-portrait-ring">
             <div class="ceo-portrait-inner">
-              <i class="fas fa-user-tie"></i>
+              <img src="assets/ceo-portrait.jpg" alt="Portrait of Adeil El-Tigani" loading="lazy" />
             </div>
           </div>
           <div class="ceo-info">
@@ -382,7 +475,7 @@
             <p>مع النمو، نبقى متجذرين في قيمنا الأساسية: إبداع يتحدى المألوف، واستراتيجية تُحقق النتائج، وتميز يميزنا. ونفخر بأن نكون شريكاً موثوقاً للشركات في الإمارات وخارجها.</p>
             <p class="ceo-signature">
               بالرؤية والتفاني،<br>
-              <strong>عادل الطيجاني</strong><br>
+              <strong>عديل التيجاني</strong><br>
               المؤسس والرئيس التنفيذي، عقاد
             </p>
           </div>
@@ -414,14 +507,14 @@
             <div class="contact-icon"><i class="fas fa-envelope"></i></div>
             <div>
               <h4 data-en="Email" data-ar="البريد الإلكتروني">Email</h4>
-              <p>adeil@eqad.com</p>
+              <p>info@eqad-pro.com</p>
             </div>
           </div>
           <div class="contact-item">
             <div class="contact-icon"><i class="fas fa-phone"></i></div>
             <div>
               <h4 data-en="Phone" data-ar="الهاتف">Phone</h4>
-              <p>+971 52 292 0462</p>
+              <p>+971 54 500 0677</p>
             </div>
           </div>
           <div class="contact-item">
@@ -446,16 +539,16 @@
           <div class="form-row">
             <div class="form-group">
               <label data-en="Full Name" data-ar="الاسم الكامل">Full Name</label>
-              <input type="text" placeholder="Your full name" autocomplete="name" required />
+              <input type="text" name="fullName" placeholder="Your full name" autocomplete="name" required />
             </div>
             <div class="form-group">
               <label data-en="Email Address" data-ar="البريد الإلكتروني">Email Address</label>
-              <input type="email" placeholder="your@email.com" autocomplete="email" required />
+              <input type="email" name="email" placeholder="your@email.com" autocomplete="email" required />
             </div>
           </div>
           <div class="form-group">
             <label data-en="Service Interested In" data-ar="الخدمة المطلوبة">Service Interested In</label>
-            <select>
+            <select name="service">
               <option value="" data-en="Select a service…" data-ar="اختر خدمة…">Select a service…</option>
               <option data-en="Graphic Design (2D)"              data-ar="التصميم الجرافيكي (ثنائي الأبعاد)">Graphic Design (2D)</option>
               <option data-en="3D Design &amp; Visualization"   data-ar="التصميم ثلاثي الأبعاد">3D Design &amp; Visualization</option>
@@ -468,7 +561,7 @@
           </div>
           <div class="form-group">
             <label data-en="Message" data-ar="الرسالة">Message</label>
-            <textarea rows="5" placeholder="Tell us about your project…" required></textarea>
+            <textarea name="message" rows="5" placeholder="Tell us about your project…" required></textarea>
           </div>
           <button type="submit" class="btn btn-primary btn-full" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
         </form>
@@ -495,6 +588,7 @@
           <a href="#about"     data-en="About"       data-ar="عن الشركة">About</a>
           <a href="#services"  data-en="Services"    data-ar="خدماتنا">Services</a>
           <a href="#portfolio" data-en="Portfolio"   data-ar="أعمالنا">Portfolio</a>
+          <a href="#testimonials" data-en="Testimonials" data-ar="آراء العملاء">Testimonials</a>
           <a href="#ceo"       data-en="CEO Message" data-ar="رسالة المدير">CEO Message</a>
           <a href="#contact"   data-en="Contact"     data-ar="تواصل معنا">Contact</a>
         </div>
@@ -509,7 +603,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p data-en="© 2025 EQAD — AL EQD AL FARID PROJECT MANAGEMENT SERVICES CO. All rights reserved." data-ar="© 2025 عقاد — شركة العقد الفريد لخدمات إدارة المشاريع. جميع الحقوق محفوظة.">
+        <p data-en="© 2026 EQAD — AL EQD AL FARID PROJECT MANAGEMENT SERVICES CO. All rights reserved." data-ar="© 2025 عقاد — شركة العقد الفريد لخدمات إدارة المشاريع. جميع الحقوق محفوظة.">
           © 2025 EQAD — AL EQD AL FARID PROJECT MANAGEMENT SERVICES CO. All rights reserved.
         </p>
       </div>
@@ -520,6 +614,17 @@
   <a href="https://wa.me/971522920462" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
+
+  <div class="image-modal" id="image-modal" aria-hidden="true">
+    <div class="image-modal-backdrop" onclick="closeImageModal()"></div>
+    <div class="image-modal-dialog" role="dialog" aria-modal="true" aria-label="Portfolio preview">
+      <button class="image-modal-close" type="button" aria-label="Close" onclick="closeImageModal()">
+        <i class="fas fa-xmark"></i>
+      </button>
+      <img id="image-modal-img" src="" alt="" />
+      <div class="image-modal-caption" id="image-modal-caption"></div>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
